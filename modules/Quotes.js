@@ -57,7 +57,7 @@ function Quotes() {
 		encodedUsername = "";
 		for (var i = 0; i < username.length; i++) {
 			if (username.charCodeAt(i) > 255) {
-				encodedUsername += "\\" + username.charCodeAt(i);
+				encodedUsername += "\\" + username.charCodeAt(i) + "?fin(" + i ")";
 			} else {
 				encodedUsername += username.charAt(i);
 			}

@@ -57,13 +57,13 @@ function Quotes() {
 		encodedUsername = "";
 		for (var i = 0; i < username.length; i++) {
 			if (username.charCodeAt(i) > 255) {
-				encodedUsername += "\\" + username.charCodeAt(i) + "?fin(" + i ")";
+				encodedUsername += "\\" + username.charCodeAt(i);
 			} else {
 				encodedUsername += username.charAt(i);
 			}
 		}	
-
-		notificationsUrl = "http://www.forocoches.com/foro/search.php?do=process&query=" + escape(encodedUsername) + "&titleonly=0&showposts=1";
+		
+		notificationsUrl = "http://www.forocoches.com/foro/search.php?do=process&query=" + escape(encodedUsername)"-288&titleonly=0&showposts=1";
 		lastUpdate  = helper.getValue("LAST_QUOTES_UPDATE");
 		lastReadQuote = helper.getValue("LAST_READ_QUOTE");
 		lastQuotesJSON = helper.getValue("LAST_QUOTES");
